@@ -28,3 +28,15 @@ for (let i = 0; i < prices.length; i++) {
   sum += prices[i];
 }
 console.log(sum);
+
+// Challenge 4: for...of - greet
+// // Log "Hello, Alice!", "Hello, Bob!" …
+// // for each name using for...of
+
+const names = ["Alice", "Bob", "Charlie", "Diana"];
+
+for (let name of names) {
+  console.log(`Hello, ${name}!`);
+}
+
+
