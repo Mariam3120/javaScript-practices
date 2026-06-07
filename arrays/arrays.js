@@ -58,3 +58,28 @@ num = 4
 num = 6
 num = 8
 num = 10*/
+
+// 3 - PUSH, POP, SHIFT, UNSHIFT
+// Challenge 6: Queue simulation
+// 1. Add "Mike" to the end
+// 2. Add "Lena" to the beginning
+// 3. Remove the first person (they got served)
+// 4. Remove the last person (they left)
+// 5. Log the final queue
+
+const queue = ["Tom", "Sara"];
+const pushQueue = queue.push("mike"); // ეს დააბრუნებს უბრალოდ 3-ს 
+// push() აბრუნებს მასივის ახალ სიგრძეს. ამიტო არაა საჭირო ახალ ცვლადში შენახვა, 
+// რადგან ჩვენ უბრალოდ გვინდა ელემენტის დამატება და არა სიგრძის მიღება.
+console.log(queue);
+
+//2
+queue.unshift("Lena");
+console.log(queue);
+
+//3 
+queue.shift();
+console.log(queue);
+//4 
+queue.pop();
+console.log(queue);
