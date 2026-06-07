@@ -1,4 +1,4 @@
-// Challenge 1: First & last============================
+// Challenge 1: First & last=====================================
 // const fruits = ["apple", "banana", "cherry", "date"];
 // // 1. Log the first element
 // // 2. Log the last element (use .length)
@@ -18,7 +18,7 @@ scores[1] = 60; // ინდექსი 1 არის მეორე ელ�
 scores[scores.length - 1] = 99; // ბოლო ელემენტის ინდექსი არის სიგრძე მინუს 1, ამიტომ ასე მივანიჭეთ ახალი მნიშვნელობა
 console.log(scores);
 
-// 2 - LOOPS
+// 2 - LOOPS======================================================
 // Challenge 3: for loop - sum
 const prices = [12, 5, 8, 30, 3];
 // // Calculate the total sum of all prices
@@ -29,7 +29,7 @@ for (let i = 0; i < prices.length; i++) {
 }
 console.log(sum);
 
-// Challenge 4: for...of - greet
+// Challenge 4: for...of - greet================================================
 // // Log "Hello, Alice!", "Hello, Bob!" …
 // // for each name using for...of
 
@@ -40,7 +40,7 @@ for (let name of names) {
 }
 
 
-// Challenge 5: forEach - multiply
+// Challenge 5: forEach - multiply==========================================
 
 // Log each number multiplied by 3
 // using .forEach()
@@ -59,7 +59,7 @@ num = 6
 num = 8
 num = 10*/
 
-// 3 - PUSH, POP, SHIFT, UNSHIFT
+// 3 - PUSH, POP, SHIFT, UNSHIFT ======================================
 // Challenge 6: Queue simulation
 // 1. Add "Mike" to the end
 // 2. Add "Lena" to the beginning
@@ -83,3 +83,16 @@ console.log(queue);
 //4 
 queue.pop();
 console.log(queue);
+
+// 4 - MAP==========================================
+// Challenge 7: Celsius to Fahrenheit
+// Create a new array where each
+// Celsius temp is converted to Fahrenheit.
+// Formula: (C * 9/5) + 32
+const temps = [0, 10, 20, 30, 40];
+const celsiusToFar = temps.map((temp) => {
+    return (temp * 9/5) + 32;
+});
+console.log(temps);
+console.log(celsiusToFar);
+
