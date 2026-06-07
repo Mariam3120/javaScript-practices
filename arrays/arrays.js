@@ -40,3 +40,21 @@ for (let name of names) {
 }
 
 
+// Challenge 5: forEach - multiply
+
+// Log each number multiplied by 3
+// using .forEach()
+
+const nums = [2, 4, 6, 8, 10];
+
+nums.forEach((num) => {
+     console.log(num * 3);
+})
+//პირველ იტერაციაზე: num = 2 ასრულებს: console.log(2 * 3); 
+// მეორე იტერაციაზე:num = 4 ასრულებს: console.log(4 * 3); და ასე გრძელდება ბოლომდე.
+//აქ num არის მიმდინარე ელემენტი.
+/* num = 2
+num = 4
+num = 6
+num = 8
+num = 10*/
