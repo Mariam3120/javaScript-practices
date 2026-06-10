@@ -111,7 +111,16 @@ const below = scores.filter((num) => {
 console.log(below);
 
 // Challenge 9: Count occurrences===========================================
-// const votes = ["yes", "no", "yes", "yes", "no", "yes"];
 // // Use .reduce() to count how many times
 // // each answer appears.
 // // Expected result: { yes: 4, no: 2 }
+const votes = ["yes", "no", "yes", "yes", "no", "yes"];
+const reduceVotes = votes.reduce((acc, vote) => {
+  if (acc[vote] === undefined) {
+    acc[vote] = 1;
+  } else {
+    acc[vote] += 1;
+  }
+  return acc;
+}, {});
+console.log(reduceVotes);
