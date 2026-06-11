@@ -299,3 +299,97 @@ const englishTracker = createTracker("English", 55);
 console.log(englishTracker(60));
 // [English]  #1   score: 60   avg: 60.00   high: 60   low: 60   → Pass
 // The Pass / Fail label at the end of each line must use a ternary operator.
+
+// Bonus — The Final Report============================================
+//   All Concepts
+// Write a function printStudentReport(name, exam, homework, attendance, bonus) that combines all four parts and prints a complete evaluation for one student.
+
+// It must:
+// Calculate the weighted score using calculateWeightedScore (Part 2)
+// Validate the result using isValidScore (Part 1)
+// Determine the letter grade using getLetterGrade (Part 1)
+// Check retake eligibility using isEligibleForRetake (Part 2)
+// Print the full report using template literals only — no string concatenation
+
+// Expected output
+// printStudentReport("Petra Novak", 74, 88, 82, 3);
+
+// ====================================
+// Student:   Petra Novak
+// ------------------------------------
+// Exam:       74    (weight: 60%)
+// Homework:   88    (weight: 40%)
+// Bonus:       3    pts
+// Final score: 82.60
+// Grade:       B
+// Attendance:  82%
+// Retake:      No
+// ====================================
+
+// Acceptance Criteria
+// Part 1
+// isValidScore correctly handles the edge case of score === 0 (must return true)
+// getLetterGrade uses if / else if / else — no switch, no ternary chains
+// Default parameter passingScore = 50 is present and works
+// The == vs === comparison is demonstrated and explained in a comment
+
+// Part 2
+// All three functions are arrow functions assigned to const
+// calculateAverage uses default parameters for s4 and count
+// isEligibleForRetake is a single return statement using logical operators
+
+// Part 3
+// processScore is a function expression (not a declaration or arrow function)
+// applyToAll is a function declaration
+// Both functions are tested with at least two different callbacks each
+
+// Part 4
+// createTracker uses a closure — no global variables for count, total, highest, lowest
+// The returned function is a function expression (anonymous)
+// Ternary operator is used for the Pass / Fail label
+// Two independent trackers are created and shown to have separate state
+// A comment explains what a closure is and why the state survives
+
+// General
+// No var — only let and const
+// All output uses template literals
+// The file runs without errors: node grades.js
+
+// Submission
+// Create a file named grades.js.
+// At the bottom of the file, include test calls for every function — at least two tests per function, including at least one edge case or invalid input.
+// Push to your GitHub repository and share the link.
+
+// Your test calls are part of the grade. A function with no tests has not been verified.
+// Include both "happy path" tests (expected input) and edge cases (invalid, boundary values).
+
+function printStudentReport(name, exam, homework, attendance, bonus) {
+  const weightScore = calculateWeightedScore(exam, homework, bonus);
+
+  if (!isValidScore(weightScore)) {
+    console.warn("Invalid score");
+    return;
+  }
+
+  const letterGrade = getLetterGrade(weightScore);
+  const eligible = isEligibleForRetake(weightScore, attendance);
+
+  const retakeText = eligible ? "Yes" : "No";
+
+  console.log(`
+====================================
+Student:     ${name}
+------------------------------------
+Exam:        ${exam}     (weight: 60%)
+Homework:    ${homework} (weight: 40%)
+Bonus:       ${bonus} pts
+------------------------------------
+Final score: ${weightScore.toFixed(2)}
+Grade:       ${letterGrade}
+Attendance:  ${attendance}%
+Retake:      ${retakeText}
+====================================
+`);
+}
+
+console.log(printStudentReport("Petra Novak", 74, 88, 82, 3));
