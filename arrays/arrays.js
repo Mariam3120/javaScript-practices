@@ -124,3 +124,24 @@ const reduceVotes = votes.reduce((acc, vote) => {
   return acc;
 }, {});
 console.log(reduceVotes);
+
+// 7 - SORT & REVERSE===========================================
+// Challenge 10: Sort numbers
+// // 1. Sort ascending (smallest first)
+// // 2. Sort descending (largest first)
+// // 3. Reverse the original array
+const someNums = [40, 1, 5, 200, 13, 99];
+
+// someNums.sort((a, b) => a - b);
+// console.log(someNums);
+// someNums.sort((a, b) => b - a);
+// console.log(someNums);
+// someNums.reverse();
+// console.log(someNums); ქვემოთ ოდნავ უკეთესი ვერსია 
+
+const ascending = [...someNums].sort((a, b) => a - b);
+console.log(ascending);
+const descending = [...someNums].sort((a, b) => b - a);
+console.log(descending);
+const reversed = [...someNums].reverse();
+console.log(reversed);
