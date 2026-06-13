@@ -145,3 +145,43 @@ const descending = [...someNums].sort((a, b) => b - a);
 console.log(descending);
 const reversed = [...someNums].reverse();
 console.log(reversed);
+
+// 8 - indexOf, lastIndexOf, includes, find, findIndex
+// Challenge 11: Search methods
+const colors = ["red", "blue", "green", "blue", "red"];
+// // 1. What index is the first "blue"?
+// // 2. What index is the last "blue"?
+// // 3. Does it include "green"?
+// // 4. Does it include "yellow"?
+
+const indexOf = colors.indexOf("blue"); 
+console.log(indexOf);
+const lastIndexOf = colors.lastIndexOf("blue"); 
+console.log(lastIndexOf);
+console.log(colors.includes("green"));
+console.log(colors.includes("yellow"));
+
+// 9 - SPLICE & SLICE
+// Challenge 12: slice - extract a copy
+const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+// // 1. Get the first 3 days
+// // 2. Get only the weekend (Sat, Sun)
+// // 3. Log the original - confirm it's unchanged
+
+const newDays = days.slice(0, 3);
+console.log(days);
+console.log(newDays);
+const weekend = days.slice(5,7);
+console.log('Slice:', weekend);
+console.log(days);
+
+
+
+// // Challenge 18: splice - mutate in place
+const menu = ["soup", "salad", "pasta", "steak", "cake"];
+// // // 1. Remove "pasta" (by index) using splice
+// // // 2. Insert "risotto" where "pasta" was
+// // // 3. Log the final menu
+const newMenu = menu.splice(2, 1, "risotto"); // 2 არის ინდექსი, 1 არის რამდენი ელემენტი წაიშლება, "risotto" არის ახალი ელემენტი რომელიც დაემატება
+console.log(menu);
+console.log("removed one", newMenu);
