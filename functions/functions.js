@@ -75,7 +75,7 @@ function runWithNumber(fn) {
 const printDouble = (x) => console.log(x * 2);
 
 runWithNumber(printDouble);
-// ფუნქციის შიგნით შევქმენი ცვლადი, რომელიც ქოლბექ ფუნქციას გადავეცი პარამეტრად 
+// ფუნქციის შიგნით შევქმენი ცვლადი, რომელიც ქოლბექ ფუნქციას გადავეცი პარამეტრად
 // და მერე runWithNumber-ს გადავეცი ეს ქოლბექი არგუმენტად თავისივე პარამეტრ-არგუმენტით
 
 // ## მოსალოდნელი შედეგი
@@ -123,19 +123,19 @@ runWithNumber(printDouble);
 // სტუდენტმა გაიგოს განსხვავება ფუნქციას შორის, რომელიც პირდაპირ ბეჭდავს შედეგს, და ფუნქციას შორის, რომელიც აბრუნებს მნიშვნელობას.
 
 // ```js
-function calculate(a, b, operation) {
-  // TODO: დააბრუნე operation(a, b)-ის შედეგი
-  return operation(a, b);
-}
+// function calculate(a, b, operation) {
+//   // TODO: დააბრუნე operation(a, b)-ის შედეგი
+//   return operation(a, b);
+// }
 
-const add = (x, y) => x + y;
-const multiply = (x, y) => x * y;
+// const add = (x, y) => x + y;
+// const multiply = (x, y) => x * y;
 
-const result1 = calculate(3, 4, add);
-const result2 = calculate(3, 4, multiply);
+// const result1 = calculate(3, 4, add);
+// const result2 = calculate(3, 4, multiply);
 
-console.log(result1);
-console.log(result2);
+// console.log(result1);
+// console.log(result2);
 // ```
 
 // ## მოსალოდნელი შედეგი
@@ -155,8 +155,8 @@ console.log(result2);
 
 // ```js
 function printCalculation(a, b, operation) {
-  const result = operation(a, b)// TODO: გამოიძახე operation და გადაეცი a და b
-    console.log("Result is: " + result);
+  const result = operation(a, b); // TODO: გამოიძახე operation და გადაეცი a და b
+  console.log("Result is: " + result);
 }
 
 const divide = (x, y) => x / y;
@@ -192,7 +192,7 @@ const minorMessage = () => console.log("You are minor");
 
 checkAge(21, adultMessage, minorMessage);
 checkAge(15, adultMessage, minorMessage);
-// ```ანუ გვაქვს ორი ქოლბექ ფუნქცია, ერთი ზრდასრულისთვის მეორე არასრულწლოვნისთვის, და checkAge 
+// ```ანუ გვაქვს ორი ქოლბექ ფუნქცია, ერთი ზრდასრულისთვის მეორე არასრულწლოვნისთვის, და checkAge
 // ფუნქციაში პირობის მიხედვით ხდება გამოძახება, ორივე ქოლბექ ფუნქცია checkAge ფუნქციის პარამეტრებში გადაეცემა,
 //  checkAge ფუნქციაში ხდება პირობის შემოწმება და შესაბამისად გამოძახება
 
@@ -214,7 +214,7 @@ checkAge(15, adultMessage, minorMessage);
 // ```js
 function checkNumber(number, onPositive, onNegative, onZero) {
   if (number > 0) {
-    // TODO: გამოიძახე onPositive და გადაეცი 
+    // TODO: გამოიძახე onPositive და გადაეცი
     onPositive(number);
   } else if (number < 0) {
     // TODO: გამოიძახე onNegative და გადაეცი number
@@ -234,7 +234,7 @@ checkNumber(-3, positive, negative, zero);
 checkNumber(0, positive, negative, zero);
 // ``` ანუ checkNumber ფუნქციაში გვაქვს პირობა, რომელიც განსაზღვრავს რომელი ქოლბექი უნდა გამოიძახოს და
 //  შესაბამისად გადაეცემა number პარამეტრი, checkNumber ფუნქციაში გადაცემული ქოლბექები კი ბეჭდავენ შესაბამის ტექსტს
-//რა მოხდება number როარ გადავცეთ ქოლბექს? -> 
+//რა მოხდება number როარ გადავცეთ ქოლბექს? ->
 // აქ არა მხოლოდ ფუნქციას ვიძახებთ, არამედ მონაცემსაც ვუგზავნით ამ ფუნქციას. ანუ:
 // checkNumber წყვეტს რომელი callback გამოიძახოს.
 // მერე ამ callback-ს გადასცემს number-ის მნიშვნელობას.
@@ -267,9 +267,9 @@ const addExclamation = (value) => value + "!";
 
 console.log(transformText("hello", makeUpperCase));
 console.log(transformText("hello", addExclamation));
-// ```აქ ეს transsformer(text) არის ქოლბექ ფუნქციის გამოძახება (makeUpperCase და addExclamation) და ამ ფუნქციას გადაეცემა text პარამეტრი, რომელიც transformText 
+// ```აქ ეს transsformer(text) არის ქოლბექ ფუნქციის გამოძახება (makeUpperCase და addExclamation) და ამ ფუნქციას გადაეცემა text პარამეტრი, რომელიც transformText
 // ფუნქციის პარამეტრია, და ამ ქოლბექ ფუნქციების შედეგი ბრუნდება transformText ფუნქციიდან
-// value იგივე text არის, უბრალოდ ქოლბექ ფუნქციების პარამეტრის სახელი value-ია, ხოლო transformText ფუნქციის პარამეტრის სახელი text-ია, 
+// value იგივე text არის, უბრალოდ ქოლბექ ფუნქციების პარამეტრის სახელი value-ია, ხოლო transformText ფუნქციის პარამეტრის სახელი text-ია,
 // მაგრამ ეს არ არის პრობლემა, რადგან ეს ორი ცვლადი სხვადასხვა ფუნქციებშია და ერთმანეთისგან დამოუკიდებელია
 
 // ## მოსალოდნელი შედეგი
@@ -288,18 +288,18 @@ console.log(transformText("hello", addExclamation));
 // სტუდენტმა დაინახოს, რომ ერთი callback რამდენჯერმე შეიძლება გამოვიძახოთ.
 
 // ```js
-function applyTwice(value, fn) {
-  const firstResult =  fn(value); // TODO: გამოიძახე fn value-ზე
-  const secondResult = fn(firstResult); // TODO: გამოიძახე fn firstResult-ზე
+// function applyTwice(value, fn) {
+//   const firstResult =  fn(value); // TODO: გამოიძახე fn value-ზე
+//   const secondResult = fn(firstResult); // TODO: გამოიძახე fn firstResult-ზე
 
-  return secondResult;
-}
+//   return secondResult;
+// }
 
-const addOne = (x) => x + 1;
-const double = (x) => x * 2;
+// const addOne = (x) => x + 1;
+// const double = (x) => x * 2;
 
-console.log(applyTwice(5, addOne));
-console.log(applyTwice(5, double));
+// console.log(applyTwice(5, addOne));
+// console.log(applyTwice(5, double));
 // ```
 
 // ## მოსალოდნელი შედეგი
@@ -338,22 +338,22 @@ console.log(applyTwice(5, double));
 // Predicate არის ფუნქცია, რომელიც აბრუნებს `true` ან `false` მნიშვნელობას.
 
 // ```js
-function checkValue(value, validator) {
-  if (validator(value)) {
-    console.log("Valid");
-  } else {
-    console.log("Invalid");
-  }
-}
+// function checkValue(value, validator) {
+//   if (validator(value)) {
+//     console.log("Valid");
+//   } else {
+//     console.log("Invalid");
+//   }
+// }
 
-const isPositive = (x) => x > 0;
-const isAdultAge = (x) => x >= 18;
+// const isPositive = (x) => x > 0;
+// const isAdultAge = (x) => x >= 18;
 
-checkValue(10, isPositive);
-checkValue(-5, isPositive);
+// checkValue(10, isPositive);
+// checkValue(-5, isPositive);
 
-checkValue(21, isAdultAge);
-checkValue(16, isAdultAge);
+// checkValue(21, isAdultAge);
+// checkValue(16, isAdultAge);
 // ```
 
 // ## მოსალოდნელი შედეგი
@@ -418,17 +418,18 @@ when(7, isEven, printNumber);
 // - ან ორივეს ერთად აკეთებს.
 
 // ```js
-// function createMultiplier(multiplier) {
-//   return function (number) {
-//     // TODO: დააბრუნე number * multiplier
-//   };
-// }
+function createMultiplier(multiplier) {
+  return function (number) {
+    // TODO: დააბრუნე number * multiplier
+    return number * multiplier;
+  };
+}
 
-// const double = createMultiplier(2);
-// const triple = createMultiplier(3);
+const double = createMultiplier(2); // double არის ფუნქცია, რომელიც იღებს რიცხვს და აბრუნებს მას 2-ით გამრავლებულს
+const triple = createMultiplier(3); // ცვლადში triple ინახება ფუნქცია, რომელიც იღებს რიცხვს და აბრუნებს მას 3-ით გამრავლებულს
 
-// console.log(double(5));
-// console.log(triple(5));
+console.log(double(5));
+console.log(triple(5));
 // ```
 
 // ## მოსალოდნელი შედეგი
@@ -441,8 +442,9 @@ when(7, isEven, printNumber);
 // ## კითხვა სტუდენტებისთვის
 
 // `double` ცვლადში რა ინახება — რიცხვი თუ ფუნქცია?
-
-// ---
+// createMultiplier აბრუნებს ახალ ფუნქციას, რომელიც იმახსოვრებს multiplier-ს (closure).
+// double და triple არიან ფუნქციები, რომლებიც შესაბამისად ამრავლებენ რიცხვს 2-ზე და 3-ზე.
+// ანუ double(5) => 10, triple(5) => 15.
 
 // # დავალება 13 — ფუნქციის “შეფუთვა” — logger wrapper
 
@@ -451,21 +453,24 @@ when(7, isEven, printNumber);
 // სტუდენტმა გაიგოს, როგორ შეიძლება ფუნქციას დავუმატოთ დამატებითი ქცევა ისე, რომ თვითონ ფუნქცია არ შევცვალოთ.
 
 // ```js
-// function withLogger(fn) {
-//   return function (a, b) {
-//     console.log("Function started");
+function withLogger(fn) {
+  return function (a, b) {
+    console.log("Function started");
 
-//     const result = console.log("Function finished"); // TODO: გამოიძახე fn(a, b)
+    const result = fn(a, b); // TODO: გამოიძახე fn(a, b)
 
-//     // TODO: დააბრუნე result
-//   };
-// }
+    // TODO: დააბრუნე result
+    console.log("Function finished");
 
-// const add = (x, y) => x + y;
+    return result;
+  };
+}
 
-// const loggedAdd = withLogger(add);
+const add = (x, y) => x + y;
 
-// console.log(loggedAdd(2, 3));
+const loggedAdd = withLogger(add);
+
+console.log(loggedAdd(2, 3));
 // ```
 
 // ## მოსალოდნელი შედეგი
@@ -474,7 +479,7 @@ when(7, isEven, printNumber);
 // Function started
 // Function finished
 // 5
-// ```
+// სწორედ ესაა wrapper-ის იდეა — ფუნქციას დამატებით ქცევას ვუმატებთ ისე, რომ თვითონ add არ შეგვიცვლია
 
 // ## შენიშვნა
 
@@ -491,28 +496,31 @@ when(7, isEven, printNumber);
 // Composition ნიშნავს, რომ ერთი ფუნქციის შედეგს გადავცემთ მეორე ფუნქციას.
 
 // ```js
-// function compose(firstFn, secondFn) {
-//   return function(value) {
-//     const secondResult = // TODO: გამოიძახე secondFn value-ზე
-//     const finalResult = // TODO: გამოიძახე firstFn secondResult-ზე
+function compose(firstFn, secondFn) {
+  return function (value) {
+    const secondResult = secondFn(value); // TODO: გამოიძახე secondFn value-ზე
+    const finalResult = firstFn(secondResult); // TODO: გამოიძახე firstFn secondResult-ზე
 
-//     return finalResult;
-//   };
-// }
+    return finalResult;
+  };
+}
 
-// const addOne = (x) => x + 1;
-// const double = (x) => x * 2;
+const addOne = (x) => x + 1;
+const doubled = (x) => x * 2;
 
-// const addOneAfterDouble = compose(addOne, double);
+const addOneAfterDouble = compose(addOne, doubled);
 
-// console.log(addOneAfterDouble(5));
+console.log(addOneAfterDouble(5));
 // ```
 
 // ## მოსალოდნელი შედეგი
 
 // ```txt
 // 11
-// ```
+// compose აერთიანებს ორ ფუნქციას.
+// ჯერ სრულდება secondFn და მისი შედეგი გადაეცემა firstFn-ს.
+// ანუ ერთი ფუნქციის შედეგი გამოიყენება მეორე ფუნქციის არგუმენტად.
+// მაგალითად: compose(addOne, doubled)(5) => addOne(doubled(5)) => 11.
 
 // ## ახსნა
 
@@ -536,23 +544,24 @@ when(7, isEven, printNumber);
 // პრაქტიკული higher-order function: ჯერ შევამოწმოთ მნიშვნელობა, შემდეგ შევასრულოთ action.
 
 // ```js
-// function withValidation(validator, action) {
-//   return function (value) {
-//     if (validator(value)) {
-//       // TODO: გამოიძახე action და გადაეცი value
-//     } else {
-//       console.log("Invalid value");
-//     }
-//   };
-// }
+function withValidation(validator, action) {
+  return function (value) {
+    if (validator(value)) {
+      // TODO: გამოიძახე action და გადაეცი value
+      action(value);
+    } else {
+      console.log("Invalid value");
+    }
+  };
+}
 
-// const isPositive = (x) => x > 0;
-// const printSquare = (x) => console.log(x * x);
+const isPositive = (x) => x > 0;
+const printSquare = (x) => console.log(x * x);
 
-// const printSquareOnlyIfPositive = withValidation(isPositive, printSquare);
+const printSquareOnlyIfPositive = withValidation(isPositive, printSquare);
 
-// printSquareOnlyIfPositive(5);
-// printSquareOnlyIfPositive(-2);
+printSquareOnlyIfPositive(5);
+printSquareOnlyIfPositive(-2);
 // ```
 
 // ## მოსალოდნელი შედეგი
@@ -562,7 +571,11 @@ when(7, isEven, printNumber);
 // Invalid value
 // ```
 
-// ---
+// withValidation იღებს validator და action ფუნქციებს.
+// ჯერ validator ამოწმებს მნიშვნელობას.
+// თუ შედეგი true-ა, სრულდება action(value),
+// ხოლო თუ false-ა, იბეჭდება "Invalid value".
+// ასე შეგვიძლია ნებისმიერ ფუნქციას დავუმატოთ ვალიდაცია მისი შეცვლის გარეშე.
 
 // # დამატებითი თეორიული კითხვები
 
